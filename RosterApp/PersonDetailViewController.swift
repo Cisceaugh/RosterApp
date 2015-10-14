@@ -10,8 +10,13 @@ import UIKit
 
 class PersonDetailViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var firstNameTextField: UITextField!
+    
+    
+    @IBOutlet weak var imageView: UIImageView!
     var selectedName = "None"
-    var selectedPerson = Person!
+    var selectedPerson : Person!
     override func viewDidLoad() {
         super.viewDidLoad()
         

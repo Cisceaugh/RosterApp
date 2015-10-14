@@ -11,7 +11,8 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource {
     
     var people = [Person]()
-
+    
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -66,7 +67,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         //1. dequeue the cell
-        let cell = dequeueReusableCellWithIdentifier("RosterCell", forIndexPath: indexPath) as! PersonTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("RosterCell", forIndexPath: indexPath) as! PersonTableViewCell
         //2. configure the cell
         let person = people[indexPath.row]
         
